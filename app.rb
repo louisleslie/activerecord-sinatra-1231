@@ -5,8 +5,10 @@ require "sinatra/activerecord"
 
 get "/" do
   "Hello 1231!"
+  # We define an instance variable that can be sent to the view, so we can display it to the user.
   @restaurants = Restaurant.all
   p @restaurants
+  # We tell Sinatra to render the index.erb file in the views folder
   erb :index
 end
 

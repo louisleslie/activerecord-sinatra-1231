@@ -1,7 +1,15 @@
 <h1>Restaurants</h1>
 <ul>
+    <%# Below is an er tag, which executes ruby code %>
     <% @restaurants.each do |restaurant| %>
-        <li><a href="/restaurants/<%= restaurant.id%>"><%= restaurant.name %></a></li>
+
+        <li>
+            <%# The line below adds the id to the href, so we know which restaurant the user wants to see information about when they click the link %>
+            <a href="/restaurants/<%= restaurant.id%>">
+                <%# Below is a pe tag, which executes ruby code and outputs the result %>
+                <%= restaurant.name %>
+            </a>
+        </li>
     <% end %>
 </ul>
 
